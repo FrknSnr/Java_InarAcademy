@@ -2,7 +2,7 @@ package weeks.week_03;
 
 import java.util.Scanner;
 
-public class Assignment03 {
+public class Assignment03_Question01 {
 
 	public static void main(String[] args) {
 
