@@ -1,4 +1,4 @@
-package chapters.Chapter03Exercises;
+package chapters.Chapter03.Exercises;
 
 import java.util.Scanner;
 
@@ -9,14 +9,15 @@ public class Chapter03_27 {
 		Scanner input = new Scanner(System.in);
 		
 		System.out.println("Enter a coordinate with x and y");
-		double coorX = input.nextDouble();
-		double coorY = input.nextDouble();
+		double x = input.nextDouble();
+		double y = input.nextDouble();
 		
-		if(coorX <= 200.0 && coorY <= 100 )
-			System.out.println("The point is in the triangle");
-		else System.out.println("The point is not in the triangle");
+		double intersectx = (-x * (200 * 100)) / (-y * 200 - x * 100);
+		double intersecty = (-y * (200 * 100)) / (-y * 200 - x * 100);
+
 		
-		
+		System.out.println("The point " + ((x > intersectx || y > intersecty)
+			? "is not " : "is " ) + "in the triangle");
 		
 		
 		

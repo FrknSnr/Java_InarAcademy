@@ -1,4 +1,4 @@
-package chapters.Chapter02Exercises;
+package chapters.Chapter02.Exercises;
 
 import java.util.Scanner;
 
@@ -22,7 +22,11 @@ public class Chapter02_08 {
 	
 	long second = totalSeconds % 60 ;
 	
-	System.out.println((hour + GMT )+ " : " + minute + " : " + second );
+	long HOUR = hour + GMT ;
+	if(HOUR > 24 || HOUR == 24)
+		System.out.println(HOUR % 24+ " : " + minute + " : " + second );
+	else
+	System.out.println( HOUR + " : " + minute + " : " + second );
 
 	}
 
